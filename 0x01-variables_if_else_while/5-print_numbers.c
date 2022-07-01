@@ -5,6 +5,7 @@ int main (void)
   int digit = 0;
   while (digit < 10)
     {
-      printf("%d\n", digit);
+      printf("%d", digit);
     }
+  putchar('\n');
 }
