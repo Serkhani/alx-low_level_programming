@@ -9,7 +9,12 @@ void print_times_table(int n)
 {
 	if (n > 15 || n < 0)
 		return;
-	int i, j, product;
+
+	int i;
+
+	int j;
+
+	int product;
 
 	for (i = 0; i < n; i++)
 	{
