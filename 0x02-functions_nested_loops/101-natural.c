@@ -1,39 +1,30 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_times_table - prints the n times table
- * @n: input integer
+ * main - sums nultplies of 3 or 5
+ * Description: multiples between 0 and 1024
+ * Return: Always(0) Success
  */
 
-void print_times_table(int n)
+int main(void)
 {
-	if (n > 15 || n < 0)
-		return;
-	int i, j, product;
+	int start_num, end_num, total;
 
-	for (i = 0; i < n; i++)
+	end_num = 1024;
+	total = 0;
+	for (start_num = 0; start_num < end_num; start_num++)
 	{
-		for (j = 0; j < n; j++)
+		if ((start_num % 3 == 0) || (start_num % 5 == 0))
 		{
-			if (j == 0)
-			{
-				_putchar(48);
-				continue;
-			}
-			product = i * j;
-			_putchar(',');
-			_putchar(' ');
-			if (product >= 10)
-			{
-				_putchar(product / 10 + 48);
-				_putchar(product % 10 + 48);
-			}
-			else
-			{
-				_putchar(' ');
-				_putchar(product + 48);
-			}
+			total = total + start_num;
 		}
-		_putchar('\n');
+		else
+		{
+			continue;
+		}
 	}
+	printf("%d", total);
+	printf("\n");
+	return (0);
+
 }
