@@ -2,6 +2,7 @@
 
 /**
  * main - prints if integer is zero
+ * @i: value to test
  * Return: 0
  */
 
