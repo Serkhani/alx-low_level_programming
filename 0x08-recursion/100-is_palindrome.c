@@ -2,6 +2,8 @@
 
 /**
  * is_palindrome(char *s) - checks to see if the word is a palindrome
+ * check(char *s, int start, int end, int pair) - Inception. Now, before
+ * you bother telling me it's impossible...
  * @s: a pointer to the string
  * @start: int moves from right to left
  * @end: int move from left to right
@@ -40,7 +42,8 @@ int last_index(char *s)
 
 
 /**
- * is_palindrome - Check if a string is a palindrome
+ * is_palindrome - calculates the length of the string and calls the
+ * checks function
  * @s: String to check
  * Return: 0 or 1
  */
