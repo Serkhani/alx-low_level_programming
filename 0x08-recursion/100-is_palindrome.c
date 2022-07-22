@@ -1,9 +1,7 @@
 #include "main.h"
 
 /**
- * is_palindrome(char *s) - checks to see if the word is a palindrome
- * check(char *s, int start, int end, int pair) - Inception. Now, before
- * you bother telling me it's impossible...
+ * check -  checks to see if the word is a palindrome
  * @s: a pointer to the string
  * @start: int moves from right to left
  * @end: int move from left to right
