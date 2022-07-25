@@ -4,13 +4,14 @@
  * _strlen - find length of a string
  * @s: string
  * Return: int
-*/
+ */
 
 int _strlen(char *s)
 {
 	int size = 0;
 
-	for (; s[size] != '\0'; size++);
+	while (s)
+		size++;
 	return (size);
 }
 
@@ -39,7 +40,7 @@ char *str_concat(char *s1, char *s2)
 
 	size2 = _strlen(s2);
 
-	m = malloc((size1 + size2) *sizeof(char) + 1);
+	m = malloc((size1 + size2) * sizeof(char) + 1);
 
 	if (m == 0)
 		return (0);
