@@ -49,7 +49,7 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i <= secondStrLen; i++)
 		*(str + i + firstStrLen) = *(s2 + i);
 
-	*(str + 1) = '\0';
+	*(str + i + firstStrLen + 1) = '\0';
 
 	return (str);
 }
