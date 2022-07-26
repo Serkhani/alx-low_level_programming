@@ -28,7 +28,7 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *str;
-	int firstStrLen = 0, secondStrLen = 0, ConcatStrLen = 0, i;
+	int firstStrLen = 0, secondStrLen = 0, concatStrLen = 0, i;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -49,7 +49,7 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i <= secondStrLen; i++)
 		*(str + i + firstStrLen) = *(s2 + i);
 
-	*(str + 1) = "/0";
+	*(str + 1) = '\0';
 
 	return (str);
 }
