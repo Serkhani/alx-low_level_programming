@@ -9,51 +9,35 @@
  * Return: ptr to the concatenated string or NULL depending on condition
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+har *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	unsigned int totalStrLen = 0;
-	unsigned int str1len = 0;
-	unsigned int str2len = 0;
-	unsigned int incrementer = 0;
+	unsigned int lenS1, lenS2, lenStr, i;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	for (lenS1 = 0; s1[lenS1] != '\0'; lenS1++)
+		;
+	for (lenS2 = 0; s2[lenS2] != '\0'; lenS2++)
 
-	/* find the length of s1 */
+	if (n > lenS2)
+		n = lenS2;
 
-	while (s1[str1len])
-	        str1len++;
+	lenStr = lenS1 + n;
 
-	while (s2[str2len])
-		str2len++;
-
-	if (str2len > n)
-		str2len = n;
-
-	totalStrLen = str1len + str2len;
-
-	str = malloc(sizeof(char) * (totalStrLen + 1));
+	str = malloc(lenStr + 1);
 
 	if (str == NULL)
 		return (NULL);
+	for (i = 0; i < lenStr; i++)
+		if (i < lenS1)
+			str[i] = s1[i];
+		else
+			str[i] = s2[i - lenS1];
 
-	int i = 0;
-
-	for (; i < str1len; i++)
-	{
-		str[incrementer++] = s1[i];
-	}
-
-	for (i = 0; i < str2len; i++)
-	{
-		str[incrementer++] = s2[i];
-	}
-
-	str[incrementer] = '\0';
+	str[i] = '\0';
 
 	return (str);
-
 }
