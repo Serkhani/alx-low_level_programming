@@ -1,21 +1,10 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
 
-
-
 /**
-
  * get_op_func - Selects correct function to perform based on @s
-
- *
-
  * @s: The operator
-
- *
-
  * Return: The pointer to the operator's function or
-
  * NULL if not found
  */
 
@@ -39,11 +28,7 @@ int (*get_op_func(char *s))(int, int)
 	{
 		if (*(ops[i].op) == *s)
 			return (ops[i].f);
-
 		i++;
 	}
-
 	return (ops[i].f);
 }
-
-Foot
